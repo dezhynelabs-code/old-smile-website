@@ -463,15 +463,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
 
-      // Validate Phone Number (10 digits)
+      // Validate Phone Number (US 10 digits)
       var phoneInput = document.getElementById('patient-phone');
-      var phoneVal = phoneInput ? phoneInput.value.replace(/[\s\-\(\)]/g, '') : '';
-      var phoneRegex = /^[6-9]\d{9}$/; // Standard 10-digit mobile check
-      if (!phoneVal || !phoneRegex.test(phoneVal)) {
-        errors.push('Please enter a valid 10-digit mobile phone number starting with 6, 7, 8, or 9.');
+      var rawPhoneVal = phoneInput ? phoneInput.value.replace(/[\s\-\(\)\.]/g, '') : '';
+      if (rawPhoneVal.startsWith('+1')) {
+        rawPhoneVal = rawPhoneVal.substring(2);
+      } else if (rawPhoneVal.length === 11 && rawPhoneVal.startsWith('1')) {
+        rawPhoneVal = rawPhoneVal.substring(1);
+      }
+      var phoneRegex = /^[2-9]\d{2}[2-9]\d{6}$/; // Standard North American Numbering Plan check
+      if (!rawPhoneVal || !phoneRegex.test(rawPhoneVal)) {
+        errors.push('Please enter a valid 10-digit US phone number (e.g. 312-555-0198).');
         if (phoneInput) {
           phoneInput.classList.add('input-error');
-          document.getElementById('err-patient-phone').textContent = 'Valid 10-digit phone number is required.';
+          document.getElementById('err-patient-phone').textContent = 'Valid 10-digit US phone number is required.';
           if (!firstInvalidInput) firstInvalidInput = phoneInput;
         }
       }
