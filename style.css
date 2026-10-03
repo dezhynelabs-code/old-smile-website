@@ -1,0 +1,2494 @@
+/* ==========================================================================
+   The Smile Hub - Premium Care | Authentic 2011 Web Design Stylesheet
+   Style Characteristics: Fixed 980px Centered Layout, Linear Gradients,
+   Bevelled Dividers, 1px Crisp Borders, Inset & Drop Shadows, Classic Typography
+   ========================================================================== */
+
+/* --------------------------------------------------
+   CSS RESET & BASE TYPOGRAPHY
+   -------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333333;
+  font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif;
+  background-color: #dce7f0;
+  background-image: linear-gradient(to bottom, #cde0ef 0px, #e8f1f8 350px, #dce7f0 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0 0 40px 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #1a66b2;
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: #0d4177;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #113f6d;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+h1 { font-size: 26px; line-height: 1.25; }
+h2 { font-size: 20px; line-height: 1.3; }
+h3 { font-size: 16px; line-height: 1.35; font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+h4 { font-size: 14px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; }
+
+p {
+  margin-bottom: 10px;
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------
+   MAIN CONTAINER (980px Fixed Centered Box)
+   -------------------------------------------------- */
+#main-wrapper {
+  width: 980px;
+  margin: 18px auto 30px auto;
+  background-color: #ffffff;
+  border: 1px solid #b2c9df;
+  box-shadow: 0 0 12px rgba(18, 55, 90, 0.22);
+}
+
+/* --------------------------------------------------
+   SITE HEADER
+   -------------------------------------------------- */
+#site-header {
+  background: #ffffff;
+  background: linear-gradient(to bottom, #ffffff 60%, #f1f7fc 100%);
+  padding: 16px 20px;
+  border-bottom: 1px solid #d0e1f0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Area */
+.logo-area .site-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-emblem {
+  width: 50px;
+  height: 50px;
+  background: #deb23d;
+  background: linear-gradient(135deg, #e7be46 0%, #caa02e 100%);
+  border: 1px solid #b88e22;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), 0 2px 4px rgba(0,0,0,0.12);
+  margin-right: 14px;
+}
+
+.logo-emblem-letter {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #1e293b;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+  text-shadow: none;
+}
+
+.logo-hub-accent {
+  color: #caa02e;
+}
+
+.logo-sub {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  color: #475569;
+  margin-top: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+/* Header Right Information (Classic 2011 Balanced Layout) */
+.header-right-meta {
+  text-align: right;
+  line-height: 1.35;
+}
+
+.header-phone-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.header-phone-box .phone-label {
+  font-size: 11px;
+  font-weight: bold;
+  color: #555555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.header-phone-box .phone-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: #104c86;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: -0.2px;
+}
+
+.header-phone-box .phone-link:hover {
+  color: #082d54;
+  text-decoration: underline;
+}
+
+.header-timings-note {
+  font-size: 11px;
+  color: #556677;
+  margin-top: 3px;
+}
+
+.header-timings-note em {
+  color: #2779bd;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------
+   NAVIGATION BAR (Classic 2011 Glossy Gradient Tab)
+   -------------------------------------------------- */
+#site-navigation {
+  background: #1f6aa9;
+  background: linear-gradient(to bottom, #2d7ebd 0%, #17548f 100%);
+  border-top: 1px solid #4a98d6;
+  border-bottom: 2px solid #0f375f;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-container {
+  position: relative;
+}
+
+/* Mobile Toggle - Hidden on desktop */
+#mobile-nav-toggle {
+  display: none;
+  background: #14497a;
+  border: 1px solid #2f7cbd;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.toggle-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 3px 0;
+}
+
+.toggle-text {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Nav Menu List */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  border-right: 1px solid #103c66;
+  border-left: 1px solid #418ecc;
+}
+
+.nav-item:first-child {
+  border-left: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 14px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-item:hover > .nav-link {
+  background: linear-gradient(to bottom, #3b8cd0 0%, #1c5fa3 100%);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-item.active > .nav-link {
+  background: linear-gradient(to bottom, #113e6a 0%, #1a5690 100%);
+  color: #ffd875;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.nav-highlight {
+  color: #fff3a8 !important;
+}
+
+.nav-arrow {
+  font-size: 9px;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+/* Dropdown Menu */
+.has-dropdown:hover .dropdown-list {
+  display: block;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 210px;
+  list-style: none;
+  border: 1px solid #1a5690;
+  border-top: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 200;
+  padding: 0;
+}
+
+.dropdown-list li {
+  border-bottom: 1px solid #e5eff8;
+}
+
+.dropdown-list li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 8px 14px;
+  color: #1a558c;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: normal;
+  background: #ffffff;
+}
+
+.dropdown-link:hover {
+  background: #eaf3fb;
+  color: #0b345b;
+  text-decoration: none;
+  padding-left: 18px;
+}
+
+/* --------------------------------------------------
+   VINTAGE 2011 WELCOME HERO SHOWCASE (IMAGELESS)
+   -------------------------------------------------- */
+.hero-vintage-showcase {
+  background: #e6f0f8;
+  background: linear-gradient(to bottom, #f5f9fd 0%, #deecf7 50%, #cce1f2 100%);
+  border-top: 1px solid #ffffff;
+  border-bottom: 2px solid #16538b;
+  padding: 20px 22px;
+  box-shadow: inset 0 1px 0 #ffffff, 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.vintage-hero-grid {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.vintage-hero-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vintage-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: #256ca8;
+  background: linear-gradient(to bottom, #2f7cbd 0%, #15518b 100%);
+  border: 1px solid #0f3d6b;
+  color: #ffd875;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.badge-star {
+  color: #ffea85;
+}
+
+.vintage-hero-title {
+  font-size: 24px;
+  line-height: 1.25;
+  color: #0d365e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 0 #ffffff;
+}
+
+.vintage-hero-intro {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #334e68;
+  margin-bottom: 14px;
+}
+
+.vintage-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px 14px;
+  background: #ffffff;
+  border: 1px solid #bcd4e6;
+  border-radius: 3px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.vintage-feature-item {
+  font-size: 11px;
+  color: #243b53;
+  line-height: 1.4;
+}
+
+.vintage-feature-item .v-check {
+  color: #2e8540;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.vintage-hero-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Vintage Right Sidebar Consultation Box */
+.vintage-hero-sidebar {
+  width: 310px;
+  flex-shrink: 0;
+}
+
+.vintage-quick-box {
+  background: #ffffff;
+  border: 1px solid #a8c4db;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(16, 52, 87, 0.15);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.vintage-box-header {
+  background: #1e649e;
+  background: linear-gradient(to bottom, #2b7bbd 0%, #155088 100%);
+  color: #ffffff;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  font-weight: bold;
+  border-bottom: 1px solid #0f3d6b;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.v-icon {
+  margin-right: 5px;
+  color: #ffd875;
+}
+
+.vintage-box-body {
+  padding: 12px 14px;
+  font-size: 11.5px;
+  background: #fbfdff;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.v-box-sub {
+  font-size: 11px;
+  color: #555555;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.v-form-group {
+  margin-bottom: 7px;
+}
+
+.v-form-group label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: bold;
+  color: #174b79;
+  margin-bottom: 2px;
+}
+
+.v-form-group .form-input,
+.v-form-group .form-select {
+  width: 100%;
+  max-width: 100%;
+  padding: 4px 6px;
+  font-size: 11px;
+}
+
+.v-box-emergency {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px dotted #bcd4e6;
+  text-align: center;
+}
+
+.v-em-label {
+  display: block;
+  font-size: 9.5px;
+  font-weight: bold;
+  color: #777777;
+}
+
+.v-em-phone {
+  font-size: 13.5px;
+  font-weight: bold;
+  color: #c02925;
+  text-decoration: none;
+}
+
+.v-em-phone:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   CLASSIC BUTTON STYLES (2011 Bevelled Gradients)
+   -------------------------------------------------- */
+.btn-classic {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.25;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-classic:hover {
+  text-decoration: none;
+}
+
+.btn-classic:active {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
+  transform: translateY(1px);
+}
+
+/* Blue Button */
+.btn-blue {
+  background: #2b7bbd;
+  background: linear-gradient(to bottom, #398cd1 0%, #185f9e 100%);
+  border-color: #124c80;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+}
+.btn-blue:hover {
+  background: linear-gradient(to bottom, #479be0 0%, #206db0 100%);
+  color: #ffffff;
+}
+
+/* Green Button */
+.btn-green {
+  background: #4cae4c;
+  background: linear-gradient(to bottom, #5cb85c 0%, #3d8b3d 100%);
+  border-color: #2e692e;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+}
+.btn-green:hover {
+  background: linear-gradient(to bottom, #6ac46a 0%, #469a46 100%);
+  color: #ffffff;
+}
+
+/* Red Button */
+.btn-red {
+  background: #d9534f;
+  background: linear-gradient(to bottom, #e26763 0%, #c43935 100%);
+  border-color: #8c201d;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+.btn-red:hover {
+  background: linear-gradient(to bottom, #ea7874 0%, #d44440 100%);
+  color: #ffffff;
+}
+
+/* Grey Button */
+.btn-grey {
+  background: #eaeaea;
+  background: linear-gradient(to bottom, #f7f7f7 0%, #dddddd 100%);
+  border-color: #b0b0b0;
+  color: #333333;
+  text-shadow: 0 1px 0 #ffffff;
+}
+.btn-grey:hover {
+  background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
+  color: #222222;
+}
+
+/* Button Sizing */
+.btn-small {
+  font-size: 11px;
+  padding: 4px 9px;
+}
+
+.btn-large {
+  font-size: 13px;
+  padding: 9px 16px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-icon {
+  margin-right: 4px;
+}
+
+/* --------------------------------------------------
+   3-COLUMN HIGHLIGHT CALLOUT STRIP
+   -------------------------------------------------- */
+.highlight-strip {
+  display: flex;
+  background: #eef5fb;
+  border-bottom: 1px solid #c9dceb;
+  padding: 14px 16px;
+  gap: 12px;
+}
+
+.highlight-box {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #c5d8ea;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.hl-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: linear-gradient(to bottom, #f6fafd 0%, #e4eff8 100%);
+  border-bottom: 1px solid #d2e3f0;
+}
+
+.hl-emergency .hl-header {
+  background: linear-gradient(to bottom, #fff5f5 0%, #fde6e6 100%);
+  border-bottom: 1px solid #f2c7c7;
+}
+
+.hl-icon {
+  font-size: 18px;
+  color: #175e9e;
+  margin-right: 8px;
+  line-height: 1;
+}
+
+.hl-emergency .hl-icon {
+  color: #c02925;
+}
+
+.hl-title {
+  font-size: 13px;
+  color: #103d68;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.hl-emergency .hl-title {
+  color: #991e1b;
+}
+
+.hl-body {
+  padding: 10px 12px;
+  font-size: 11.5px;
+  color: #555555;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.hl-body p {
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+.hl-action {
+  margin-top: auto;
+}
+
+/* --------------------------------------------------
+   MAIN 2-COLUMN LAYOUT (Content 670px + Sidebar 280px)
+   -------------------------------------------------- */
+.content-columns-wrapper {
+  display: flex;
+  padding: 18px 16px;
+  background: #ffffff;
+  gap: 16px;
+}
+
+.main-content-col {
+  flex: 1;
+  min-width: 0; /* Prevents overflow */
+}
+
+.sidebar-col {
+  width: 285px;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------
+   CONTENT BLOCKS & SECTION TITLE BARS
+   -------------------------------------------------- */
+.content-block {
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px dotted #c8d9e8;
+}
+
+.content-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section-title-bar {
+  background: #eaf3fa;
+  background: linear-gradient(to bottom, #edf5fc 0%, #dbe8f5 100%);
+  border: 1px solid #b7cee3;
+  border-left: 4px solid #1a629f;
+  padding: 7px 12px;
+  margin-bottom: 14px;
+}
+
+.section-title-bar h2 {
+  font-size: 17px;
+  color: #0f3963;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: bold;
+}
+
+.section-sub-tag {
+  display: block;
+  font-size: 11px;
+  color: #4a6f91;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 2px;
+}
+
+.section-intro {
+  font-size: 12.5px;
+  color: #444444;
+  margin-bottom: 14px;
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------
+   VINTAGE ABOUT CLINIC LAYOUT
+   -------------------------------------------------- */
+.vintage-about-layout {
+  font-size: 12px;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.vintage-about-layout p {
+  margin-bottom: 10px;
+}
+
+.vintage-highlight-columns {
+  display: flex;
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.vintage-hl-column {
+  flex: 1;
+  background: #f8fafc;
+  border: 1px solid #c9daea;
+  border-radius: 3px;
+  padding: 10px 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.vintage-hl-head {
+  font-size: 12px;
+  font-weight: bold;
+  color: #103f6d;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px dotted #bdd1e3;
+}
+
+.vintage-hl-column p {
+  font-size: 11px;
+  color: #4a5568;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.feature-bullets-box {
+  background: #f4f8fc;
+  border: 1px solid #d3e2ef;
+  border-radius: 3px;
+  padding: 10px 12px;
+  margin-top: 10px;
+}
+
+.feature-bullets-box h4 {
+  color: #103e68;
+  margin-bottom: 6px;
+  font-size: 12.5px;
+}
+
+.classic-bullet-list {
+  list-style: square;
+  padding-left: 18px;
+  font-size: 11.5px;
+}
+
+.classic-bullet-list li {
+  margin-bottom: 5px;
+  line-height: 1.45;
+}
+
+/* Stats Counter Strip */
+.stats-counter-strip {
+  display: flex;
+  background: #e9f2f9;
+  background: linear-gradient(to bottom, #f2f7fc 0%, #e1edf6 100%);
+  border: 1px solid #b8d1e6;
+  border-radius: 3px;
+  padding: 10px 0;
+}
+
+.stat-cell {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #c8dced;
+}
+
+.stat-cell:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #114b82;
+  font-family: Georgia, serif;
+}
+
+.stat-label {
+  display: block;
+  font-size: 10.5px;
+  color: #51718f;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------
+   TREATMENTS & SERVICES SECTION
+   -------------------------------------------------- */
+.treatment-filter-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+  background: #f0f6fb;
+  border: 1px solid #c9ddec;
+  padding: 6px;
+  border-radius: 3px;
+}
+
+.filter-btn {
+  background: #ffffff;
+  border: 1px solid #b8cee1;
+  color: #1c5b94;
+  font-size: 11.5px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background: #e3effa;
+}
+
+.filter-btn.active {
+  background: #1e66a3;
+  background: linear-gradient(to bottom, #2b7bbd, #144f84);
+  color: #ffffff;
+  border-color: #0f3e69;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.treatment-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.treatment-card {
+  background: #ffffff;
+  border: 1px solid #c2d7e9;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.treatment-card:hover {
+  border-color: #8bb5d8;
+  box-shadow: 0 2px 6px rgba(18, 62, 104, 0.12);
+}
+
+.treatment-card .card-header {
+  background: #e9f2fa;
+  background: linear-gradient(to bottom, #f3f8fd 0%, #e2eefa 100%);
+  border-bottom: 1px solid #c8dcee;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card-icon {
+  font-size: 16px;
+  color: #1b63a2;
+  margin-right: 6px;
+  line-height: 1;
+}
+
+.card-title {
+  font-size: 13.5px;
+  color: #0f3c67;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.treatment-card .card-body {
+  padding: 10px;
+  font-size: 11.5px;
+  color: #444444;
+  flex: 1;
+}
+
+.treatment-card .card-body p {
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+
+.card-spec-list {
+  list-style: square;
+  padding-left: 16px;
+  font-size: 11px;
+  color: #555555;
+}
+
+.card-spec-list li {
+  margin-bottom: 3px;
+}
+
+.treatment-card .card-footer {
+  padding: 6px 10px 9px 10px;
+  background: #fbfdfe;
+  border-top: 1px solid #eef4f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --------------------------------------------------
+   DOCTORS PROFILES SECTION
+   -------------------------------------------------- */
+.doctors-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.doctor-profile-card {
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #c5d9eb;
+  border-radius: 3px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  gap: 14px;
+}
+
+.doctor-photo-frame {
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.doctor-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border: 1px solid #9dbcd7;
+  padding: 2px;
+  background: #ffffff;
+}
+
+.doctor-info-frame {
+  flex: 1;
+}
+
+.doctor-name {
+  font-size: 16px;
+  color: #0e3f6e;
+  margin-bottom: 2px;
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+
+.doctor-designation {
+  font-size: 12px;
+  color: #2167a5;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.doctor-exp-badge {
+  display: inline-block;
+  background: #eef6fc;
+  border: 1px solid #bed7ec;
+  font-size: 10px;
+  font-weight: bold;
+  color: #195286;
+  padding: 1px 6px;
+  border-radius: 2px;
+  margin-bottom: 6px;
+}
+
+.doctor-bio {
+  font-size: 11.5px;
+  color: #444444;
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+
+.doctor-schedule {
+  font-size: 11px;
+  color: #2f567c;
+  background: #f7fafc;
+  border-left: 3px solid #236ca9;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+}
+
+.doctor-action-row {
+  margin-top: 4px;
+}
+
+/* --------------------------------------------------
+   PATIENT TESTIMONIALS SECTION
+   -------------------------------------------------- */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-box {
+  background: #fbfdfa;
+  background: linear-gradient(to bottom, #ffffff 0%, #f6f9fc 100%);
+  border: 1px solid #cbe0ef;
+  border-left: 4px solid #2b7bbd;
+  padding: 10px 12px;
+  border-radius: 2px;
+}
+
+.review-stars {
+  color: #e69500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.review-text {
+  font-size: 11.5px;
+  font-style: italic;
+  color: #333333;
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+
+.review-author {
+  font-size: 11px;
+  color: #555555;
+}
+
+/* --------------------------------------------------
+   FAQS ACCORDION
+   -------------------------------------------------- */
+.faq-accordion {
+  border: 1px solid #c9deee;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid #d8e8f4;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  background: #edf5fc;
+  background: linear-gradient(to bottom, #f6fafd 0%, #e3eff8 100%);
+  padding: 9px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.faq-question:hover {
+  background: linear-gradient(to bottom, #ffffff 0%, #eaf3fb 100%);
+}
+
+.faq-icon {
+  font-size: 9px;
+  color: #195e9b;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(90deg);
+}
+
+.faq-title-text {
+  font-size: 12.5px;
+  font-weight: bold;
+  color: #114272;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 14px;
+  background: #ffffff;
+  font-size: 12px;
+  color: #444444;
+  line-height: 1.5;
+  border-top: 1px solid #e7f0f7;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+/* --------------------------------------------------
+   APPOINTMENT BOOKING FORM (Classic 2011 Table Form)
+   -------------------------------------------------- */
+.form-wrapper-2011 {
+  background: #fbfdfe;
+  border: 1px solid #c8ddec;
+  border-radius: 3px;
+  padding: 14px 16px;
+}
+
+.form-intro-note {
+  font-size: 11.5px;
+  color: #555555;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e4edf5;
+}
+
+.required-asterisk {
+  color: #c92c27;
+  font-weight: bold;
+}
+
+/* Alert Boxes */
+.form-alert-box {
+  padding: 10px 14px;
+  border-radius: 3px;
+  margin-bottom: 14px;
+  font-size: 12px;
+}
+
+.alert-error {
+  background-color: #fdf2f2;
+  border: 1px solid #f2bcba;
+  color: #a92320;
+}
+
+.alert-error ul {
+  margin-top: 6px;
+  padding-left: 18px;
+}
+
+.alert-error li {
+  margin-bottom: 3px;
+}
+
+.alert-success {
+  background-color: #f0f9f1;
+  border: 1px solid #b7e3bd;
+  color: #2b7535;
+  display: flex;
+  gap: 12px;
+}
+
+.alert-success-icon {
+  font-size: 28px;
+  line-height: 1;
+  color: #2b8e3a;
+}
+
+.alert-success-content h4 {
+  color: #1b5b24;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.integration-notice-box {
+  background: #ffffff;
+  border: 1px dashed #7fc68b;
+  padding: 8px 10px;
+  margin: 10px 0;
+  border-radius: 2px;
+  color: #333333;
+  font-size: 11px;
+}
+
+.integration-notice-box code {
+  background: #eef5ee;
+  padding: 1px 4px;
+  border-radius: 2px;
+  color: #155724;
+  font-family: Consolas, monospace;
+}
+
+.ref-badge {
+  background: #17548f;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-family: Consolas, monospace;
+}
+
+/* Classic Form Table */
+.form-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form-table td {
+  padding: 6px 4px;
+  vertical-align: top;
+}
+
+.form-label-col {
+  width: 175px;
+  text-align: right;
+  padding-right: 12px !important;
+  font-weight: bold;
+  font-size: 12px;
+  color: #103c66;
+  padding-top: 8px !important;
+}
+
+.form-input-col {
+  flex: 1;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  max-width: 380px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  padding: 5px 8px;
+  border: 1px solid #abc3da;
+  border-radius: 2px;
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #1c629e;
+  outline: none;
+  background-color: #fffff8;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 4px rgba(28, 98, 158, 0.4);
+}
+
+.form-input.input-error,
+.form-select.input-error,
+.form-textarea.input-error {
+  border-color: #c92c27;
+  background-color: #fff9f9;
+}
+
+.form-date {
+  max-width: 220px;
+}
+
+.field-hint {
+  display: block;
+  font-size: 10.5px;
+  color: #777777;
+  margin-top: 2px;
+}
+
+.field-error-msg {
+  color: #c92c27;
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.form-action-cell {
+  padding-top: 12px !important;
+}
+
+.form-action-cell .btn-classic {
+  margin-right: 8px;
+}
+
+/* --------------------------------------------------
+   CONTACT & LOCATION SECTION
+   -------------------------------------------------- */
+.contact-info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.contact-card-box {
+  flex: 1;
+  min-width: 240px;
+  border: 1px solid #c6daeb;
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+.full-width-card {
+  flex-basis: 100%;
+}
+
+.contact-card-header {
+  background: linear-gradient(to bottom, #f3f8fd 0%, #e2eefa 100%);
+  border-bottom: 1px solid #c9ddec;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #103f6d;
+}
+
+.contact-card-body {
+  padding: 10px 12px;
+  font-size: 11.5px;
+  color: #444444;
+}
+
+.contact-card-body p {
+  margin-bottom: 6px;
+}
+
+.map-container-mock {
+  margin-top: 10px;
+  border: 1px solid #b3cde3;
+  border-radius: 2px;
+  background: #eef5fb;
+}
+
+.map-header-bar {
+  background: #256ca8;
+  color: #ffffff;
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.map-pin {
+  margin-right: 4px;
+}
+
+.map-inner-visual {
+  height: 140px;
+  background: #d8e7f3 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.15"><rect width="60" height="60" fill="none" stroke="%230b4273" stroke-width="1"/></svg>');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.map-marker-pin {
+  text-align: center;
+}
+
+.pin-bubble {
+  background: #ffffff;
+  border: 1px solid #1a5690;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.pin-point {
+  color: #c92c27;
+  font-size: 14px;
+  line-height: 1;
+  margin-top: -2px;
+}
+
+.map-tools {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Quick Inquiry Box */
+.quick-inquiry-box {
+  background: #f8fafc;
+  border: 1px solid #c9ddec;
+  padding: 12px 14px;
+  border-radius: 3px;
+}
+
+.quick-inquiry-box h3 {
+  font-size: 13.5px;
+  color: #103f6e;
+  margin-bottom: 10px;
+}
+
+.inquiry-fields-row {
+  display: flex;
+  gap: 10px;
+}
+
+.inquiry-field {
+  flex: 1;
+}
+
+.inquiry-field label {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  color: #194b7a;
+  margin-bottom: 3px;
+}
+
+.inquiry-field .form-input,
+.inquiry-field .form-textarea {
+  max-width: 100%;
+}
+
+/* --------------------------------------------------
+   SIDEBAR WIDGETS (Classic 2011 Blue Box Panels)
+   -------------------------------------------------- */
+.sidebar-widget {
+  background: #ffffff;
+  border: 1px solid #b8cee1;
+  border-radius: 3px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.widget-header {
+  background: #256ca8;
+  background: linear-gradient(to bottom, #2e7bbd 0%, #15528c 100%);
+  border-bottom: 1px solid #0f3d6b;
+  color: #ffffff;
+  padding: 7px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.widget-icon {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.widget-body {
+  padding: 10px 12px;
+  font-size: 11.5px;
+}
+
+.widget-note {
+  font-size: 11px;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.sidebar-form-group {
+  margin-bottom: 8px;
+}
+
+.sidebar-form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  color: #1c5284;
+  margin-bottom: 2px;
+}
+
+.sidebar-form-group .form-input,
+.sidebar-form-group .form-select {
+  max-width: 100%;
+  width: 100%;
+  font-size: 11.5px;
+  padding: 4px 6px;
+}
+
+.sidebar-alert {
+  margin-top: 8px;
+  padding: 6px 8px;
+  font-size: 11px;
+  border-radius: 2px;
+}
+
+/* Hours Table */
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table td {
+  padding: 5px 2px;
+  font-size: 11.5px;
+  border-bottom: 1px dotted #d1e2f0;
+}
+
+.hours-table tr:last-child td {
+  border-bottom: none;
+}
+
+.sunday-row td {
+  color: #777777;
+}
+
+.badge-closed {
+  background: #d9534f;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 1px 4px;
+  border-radius: 2px;
+}
+
+.hours-footnote {
+  margin-top: 8px;
+  font-size: 10px;
+  color: #666666;
+  font-style: italic;
+}
+
+/* Emergency Widget */
+.widget-emergency .widget-header {
+  background: linear-gradient(to bottom, #d9534f 0%, #aa2724 100%);
+  border-bottom-color: #771916;
+}
+
+.emergency-phone-box {
+  background: #fff5f5;
+  border: 1px solid #f2c4c4;
+  border-radius: 2px;
+  text-align: center;
+  padding: 8px 6px;
+  margin: 6px 0;
+}
+
+.em-label {
+  display: block;
+  font-size: 9.5px;
+  font-weight: bold;
+  color: #a82724;
+  letter-spacing: 0.5px;
+}
+
+.em-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #bd1f1a;
+  text-decoration: none;
+}
+
+.em-subtext {
+  font-size: 10.5px;
+  color: #666666;
+  margin-top: 4px;
+}
+
+/* Insurance Widget */
+.widget-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0 0;
+}
+
+.widget-check-list li {
+  font-size: 11px;
+  color: #333333;
+  margin-bottom: 5px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.widget-check-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2b7bbd;
+  font-size: 10px;
+}
+
+/* Downloads Widget */
+.download-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.download-links-list li {
+  padding: 4px 0;
+  border-bottom: 1px dotted #d1e2f0;
+}
+
+.download-links-list li:last-child {
+  border-bottom: none;
+}
+
+.download-links-list a {
+  font-size: 11px;
+  color: #195a94;
+  text-decoration: none;
+}
+
+.download-links-list a:hover {
+  text-decoration: underline;
+  color: #0b345b;
+}
+
+/* --------------------------------------------------
+   FOOTER (Classic 2011 Navy Multi-Column Footer)
+   -------------------------------------------------- */
+#site-footer {
+  background: #0f2c4a;
+  background: linear-gradient(to bottom, #13395e 0%, #0a1f34 100%);
+  border-top: 3px solid #236ca9;
+  color: #bad3eb;
+  font-size: 11.5px;
+}
+
+.footer-top-strip {
+  padding: 20px;
+}
+
+.footer-cols-grid {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #1e4b78;
+}
+
+.footer-desc {
+  font-size: 11px;
+  line-height: 1.45;
+  color: #a4c4e2;
+  margin-bottom: 10px;
+}
+
+.footer-iso-badge {
+  background: #091d31;
+  border: 1px solid #1d4d7a;
+  padding: 3px 6px;
+  font-size: 10px;
+  color: #ffd875;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.badge-star {
+  color: #ffca28;
+}
+
+.footer-social-links {
+  font-size: 10.5px;
+}
+
+.social-link {
+  display: inline-block;
+  background: #194a78;
+  color: #ffffff;
+  border: 1px solid #2968a3;
+  padding: 1px 5px;
+  margin-left: 3px;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 9.5px;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: #2b7bbd;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 4px;
+}
+
+.footer-links-list a {
+  color: #a7c8e6;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.footer-links-list a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-contact-item {
+  font-size: 11px;
+  color: #a4c4e2;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.footer-contact-item strong {
+  color: #ffffff;
+}
+
+.footer-contact-item a {
+  color: #ffd875;
+  text-decoration: none;
+}
+
+.footer-contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Bottom Strip */
+.footer-bottom-strip {
+  background: #081829;
+  border-top: 1px solid #133352;
+  padding: 8px 20px;
+  font-size: 10.5px;
+  color: #6c8fae;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom-inner strong {
+  color: #9cbddc;
+}
+
+.footer-sub-links a {
+  color: #7c9ebc;
+  text-decoration: none;
+  margin: 0 4px;
+}
+
+.footer-sub-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   MODAL WINDOW (Classic 2011 Window Box)
+   -------------------------------------------------- */
+.classic-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-window {
+  position: relative;
+  background: #ffffff;
+  width: 580px;
+  max-width: 90%;
+  border: 2px solid #1b588e;
+  border-radius: 4px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 10000;
+}
+
+.modal-header-bar {
+  background: #1e649e;
+  background: linear-gradient(to bottom, #2b7bbd 0%, #155088 100%);
+  color: #ffffff;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #0e3b66;
+}
+
+.modal-icon {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.modal-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  flex: 1;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.modal-close-btn:hover {
+  color: #ffcccc;
+}
+
+.modal-body-content {
+  padding: 14px 16px;
+  font-size: 12px;
+  color: #333333;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.modal-desc-box {
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0ecf6;
+}
+
+.modal-info-columns {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.modal-info-col {
+  flex: 1;
+  background: #f7fafd;
+  border: 1px solid #d4e3f0;
+  padding: 8px 10px;
+  border-radius: 2px;
+}
+
+.modal-info-col h4 {
+  font-size: 12px;
+  color: #14497a;
+  margin-bottom: 6px;
+}
+
+.modal-meta-box {
+  background: #eef5fa;
+  border: 1px solid #bed6ea;
+  padding: 8px 12px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+.modal-footer-bar {
+  background: #f1f6fa;
+  border-top: 1px solid #d4e4f0;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* --------------------------------------------------
+   BACK TO TOP FLOATING BUTTON (Classic 2011)
+   -------------------------------------------------- */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: #1c5e96;
+  background: linear-gradient(to bottom, #2b7ec4 0%, #15518b 100%);
+  border: 1px solid #0d3861;
+  color: #ffffff;
+  padding: 5px 9px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 3px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  display: none;
+  z-index: 999;
+}
+
+.back-to-top-btn:hover {
+  background: linear-gradient(to bottom, #398cd1 0%, #1c5fa2 100%);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------
+   RESPONSIVE DESIGN (Adaptive without Modernizing)
+   -------------------------------------------------- */
+@media screen and (max-width: 1000px) {
+  #main-wrapper,
+  .fixed-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #top-bar {
+    font-size: 10px;
+  }
+
+  .top-bar-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+  }
+
+  .top-bar-sep {
+    display: none;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .logo-area .site-logo {
+    justify-content: center;
+  }
+
+  .header-contact-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Mobile Nav Dropdown */
+  #mobile-nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-item {
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #164977;
+  }
+
+  .has-dropdown .dropdown-list {
+    position: static;
+    box-shadow: none;
+    background: #174b78;
+    border: none;
+  }
+
+  .dropdown-link {
+    background: #174b78;
+    color: #ffffff;
+    padding-left: 24px;
+  }
+
+  .dropdown-link:hover {
+    background: #103b63;
+    color: #ffffff;
+  }
+
+  /* Vintage Hero Showcase (Imageless) */
+  .vintage-hero-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .vintage-hero-sidebar {
+    width: 100%;
+  }
+
+  .vintage-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vintage-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Highlights */
+  .highlight-strip {
+    flex-direction: column;
+  }
+
+  /* 2-Column Content */
+  .content-columns-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar-col {
+    width: 100%;
+  }
+
+  .about-overview-grid {
+    flex-direction: column;
+  }
+
+  .about-photo-wrapper {
+    width: 100%;
+  }
+
+  .treatment-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .form-label-col {
+    width: 100%;
+    text-align: left;
+    display: block;
+    padding-bottom: 2px !important;
+  }
+
+  .form-input-col {
+    display: block;
+    width: 100%;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    max-width: 100%;
+  }
+
+  .footer-cols-grid {
+    flex-direction: column;
+  }
+}
+
+/* --------------------------------------------------
+   SUBPAGE HEADER & BREADCRUMBS (Classic 2011)
+   -------------------------------------------------- */
+.subpage-header-strip {
+  background: #256ca8;
+  background: linear-gradient(to bottom, #2b7bbd 0%, #155088 100%);
+  border-bottom: 2px solid #0f3d6b;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subpage-header-strip h1 {
+  font-size: 21px;
+  color: #ffffff;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.subpage-breadcrumbs {
+  font-size: 11px;
+  color: #d1e5f8;
+}
+
+.subpage-breadcrumbs a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.subpage-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.subpage-breadcrumbs .crumb-sep {
+  margin: 0 5px;
+  color: #8bbce6;
+}
+
+.subpage-breadcrumbs .crumb-current {
+  color: #ffd875;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .subpage-header-strip {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .vintage-highlight-columns {
+    flex-direction: column !important;
+  }
+}
+
+/* --------------------------------------------------
+   VINTAGE 2011 ANNOUNCEMENT NEWS TICKER
+   -------------------------------------------------- */
+.vintage-ticker-wrap {
+  display: flex;
+  align-items: center;
+  background: #fffbe6;
+  background: linear-gradient(to bottom, #fffdf2 0%, #fff6d1 100%);
+  border-bottom: 1px solid #dfcf92;
+  border-top: 1px solid #f6ebd0;
+  font-size: 11.5px;
+  overflow: hidden;
+  height: 28px;
+  line-height: 28px;
+}
+
+.vintage-ticker-title {
+  background: #c88a10;
+  background: linear-gradient(to bottom, #d69818 0%, #ad7303 100%);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.15);
+  border-right: 1px solid #916102;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+}
+
+.vintage-ticker-body {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 10px;
+  color: #5c450a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+
+.vintage-ticker-body marquee {
+  display: block;
+  width: 100%;
+  line-height: 28px;
+}
+
+/* --------------------------------------------------
+   MISSING UTILITIES & RETRO CLASSES
+   -------------------------------------------------- */
+.classic-form {
+  display: block;
+}
+
+.hl-implants .hl-header {
+  background: linear-gradient(to bottom, #3080bf 0%, #175a96 100%);
+}
+
+.hl-booking .hl-header {
+  background: linear-gradient(to bottom, #3fa752 0%, #298239 100%);
+}
+
+.btn-detail {
+  cursor: pointer;
+}
+
+.widget-quick-book { }
+.sidebar-form { display: block; }
+.widget-hours { }
+.widget-insurance { }
+.widget-downloads { }
+
+.copyright-text {
+  font-size: 11px;
+  color: #dbe8f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.meta-item {
+  font-size: 11.5px;
+  color: #333333;
+  margin-bottom: 4px;
+}
+
+/* --------------------------------------------------
+   RETRO 2011 VISITOR COUNTER & SYSTEM COMPATIBILITY
+   -------------------------------------------------- */
+.widget-counter {
+  background: #f7fafc;
+  border-top: 2px solid #205988;
+}
+
+.counter-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  margin: 10px 0 6px 0;
+}
+
+.counter-digit {
+  background: #0f243a;
+  background: linear-gradient(to bottom, #1d3b5e 0%, #0d1e30 50%, #050d17 100%);
+  color: #00ff66;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 2px;
+  border: 1px solid #000000;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 0 5px #00ff66;
+  line-height: 1;
+}
+
+.counter-caption {
+  font-size: 10px;
+  color: #62778c;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.retro-compat-box {
+  background: #ffffff;
+  border: 1px dashed #b9cddf;
+  padding: 6px 8px;
+  font-size: 9.5px;
+  color: #4b6075;
+  text-align: center;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------
+   VINTAGE POST-IT DENTAL HEALTH TIP
+   -------------------------------------------------- */
+.widget-tip {
+  background: #fffdf2;
+  border: 1px solid #ebd998;
+}
+
+.widget-tip .widget-header {
+  background: linear-gradient(to bottom, #caa02e 0%, #a47d1b 100%);
+  border-bottom: 1px solid #826210;
+  color: #ffffff;
+}
+
+.tip-content {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #4a3c10;
+  background: #fffde6;
+  border: 1px solid #f2e7a6;
+  padding: 8px 10px;
+  border-radius: 2px;
+}
+
+.tip-content strong {
+  color: #2b2103;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* --------------------------------------------------
+   VINTAGE SECTION CONTENT MISALIGNMENT & RETRO ASYMMETRY
+   Deliberate retro styling: staggered margins, indented
+   subtitles, offset paragraphs, and asymmetrical cards.
+   -------------------------------------------------- */
+
+/* 1. Header titles & sub-tags offset */
+.section-title-bar h2 {
+  margin-left: 2px;
+}
+
+.section-sub-tag {
+  margin-left: 22px !important;
+  font-style: italic;
+  letter-spacing: 0.3px;
+}
+
+.vintage-badge {
+  margin-left: 6px;
+}
+
+.vintage-hero-title {
+  margin-left: -3px;
+}
+
+.vintage-hero-intro {
+  text-indent: 18px;
+  margin-left: 8px;
+}
+
+/* 2. Staggered feature list items in Hero */
+.vintage-features-grid .vintage-feature-item:nth-child(odd) {
+  padding-left: 2px;
+}
+
+.vintage-features-grid .vintage-feature-item:nth-child(even) {
+  padding-left: 14px;
+}
+
+/* 3. Staggered highlight callout boxes */
+.highlight-strip .hl-emergency {
+  margin-top: 0;
+}
+
+.highlight-strip .hl-implants {
+  margin-top: 6px;
+}
+
+.highlight-strip .hl-booking {
+  margin-top: 2px;
+}
+
+/* 4. Section intros & paragraph indents */
+.section-intro {
+  text-indent: 16px;
+  margin-left: 6px;
+}
+
+.vintage-about-layout p:first-of-type {
+  text-indent: 22px;
+}
+
+.vintage-about-layout p:nth-of-type(2) {
+  margin-left: 12px;
+}
+
+/* 5. Asymmetrical vintage highlight columns */
+.vintage-highlight-columns .vintage-hl-column:nth-child(1) {
+  margin-top: 0;
+}
+
+.vintage-highlight-columns .vintage-hl-column:nth-child(2) {
+  margin-top: 7px;
+}
+
+.vintage-highlight-columns .vintage-hl-column:nth-child(3) {
+  margin-top: -3px;
+}
+
+.vintage-hl-column p {
+  text-indent: 10px;
+}
+
+/* 6. Treatment cards slight vertical stagger */
+.treatment-cards-grid .treatment-card:nth-child(even) {
+  margin-top: 10px;
+}
+
+.treatment-cards-grid .treatment-card .card-title {
+  margin-left: 6px;
+}
+
+.treatment-cards-grid .treatment-card .card-body p {
+  text-indent: 10px;
+}
+
+/* 7. Doctor profile cards staggered alignment */
+.doctor-profile-card:nth-child(odd) {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.doctor-profile-card:nth-child(even) {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.doctor-designation {
+  padding-left: 8px;
+}
+
+.doctor-exp-badge {
+  margin-left: 6px;
+}
+
+/* 8. Patient reviews offset boxes */
+.reviews-list .review-box:nth-child(odd) {
+  margin-left: 14px;
+  border-left: 3px solid #2872af;
+}
+
+.reviews-list .review-box:nth-child(even) {
+  margin-right: 14px;
+  margin-left: 0;
+  border-right: 3px solid #2872af;
+}
+
+.review-box .review-text {
+  text-indent: 14px;
+}
+
+.review-box .review-author {
+  text-align: right;
+  padding-right: 16px;
+}
+
+
